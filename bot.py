@@ -38,13 +38,14 @@ def test():
     print("2. To decompose a program into several small subroutines.")
     print("3. To determine the execution time of a program.")
     print("4. To interrupt the execution of a program.")
-    user_answer = input()
-    if user_answer == str(2):
-        print('Completed, have a nice day!')
-    else:
+    while True:
+        user_answer = input()
         if user_answer != str(2):
-            print("Please, try again.")
-            user_answer = input()
+            print('Please, try again.')
+        else:
+            if user_answer == str(2):
+                print('Completed, have a nice day!')
+                break
 
 def end():
     print('Congratulations, have a nice day!')
